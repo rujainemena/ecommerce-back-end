@@ -25,7 +25,7 @@ Product.init(
       allowNull: false,
       validate:{
         isDecimal: true
-      } // validates that the value is a decimal
+      } 
     },
     stock:{
       type: DataTypes.INTEGER,
@@ -37,11 +37,12 @@ Product.init(
     },
     category_id:{
       type: DataTypes.INTEGER,
+      // the foreign key
       references:{
         model: 'category',
         key: 'id',
         unique: false
-      } // the foreign key
+      } 
     }
   },
   {
