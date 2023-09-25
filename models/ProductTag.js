@@ -3,9 +3,8 @@ const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
 class ProductTag extends Model {}
-
+// defined columns inside the ProductTag model (table)
 ProductTag.init(
-  // defined columns
   {
     id:{
       type: DataTypes.INTEGER,
@@ -15,6 +14,7 @@ ProductTag.init(
     },
     product_id:{
       type: DataTypes.INTEGER,
+      // the foreign key
       references:{
         model: 'product',
         key: 'id',
@@ -23,6 +23,7 @@ ProductTag.init(
     },
     tag_id:{
       type: DataTypes.INTEGER,
+      // the foreign key
       references:{
         model: 'tag',
         key: 'id',
