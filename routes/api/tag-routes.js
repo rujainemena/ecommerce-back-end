@@ -21,9 +21,9 @@ router.get('/:id', async (req, res) => {
   // find a single tag by its `id`
   // be sure to include its associated Product data
   try {
-    const id = re.params.id
-    const tagData = await Tag.findByPk({
-      include: [id, { model: Product, ProductTag }]
+    const id = req.params.id
+    const tagData = await Tag.findByPk(id, {
+      include: [{ model: Product, ProductTag }]
     })
     res.status(200).json(tagData)
   } catch (err) {
@@ -43,12 +43,12 @@ router.post('/', async (req, res) => {
 });
 
 // endpoint: http://localhost:3001/api/tags/1
-router.put('/:id', async(req, res) => {
+router.put('/:id', async (req, res) => {
   // update a tag's name by its `id` value
   try {
-    const tagData = await Tag.update(req.body,{
-      where:{
-        id:req.params.id
+    const tagData = await Tag.update(req.body, {
+      where: {
+        id: req.params.id
       }
     })
     res.status(200).json(tagData)
@@ -58,12 +58,12 @@ router.put('/:id', async(req, res) => {
 });
 
 // endpoint: http://localhost:3001/api/tags/1
-router.delete('/:id', async(req, res) => {
+router.delete('/:id', async (req, res) => {
   // delete on tag by its `id` value
   try {
     const tagData = await Tag.destroy({
-      where:{
-        id:req.params.id
+      where: {
+        id: req.params.id
       }
     })
     res.status(200).json(tagData)
