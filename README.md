@@ -2,10 +2,13 @@
 
 ## Description
 
-Provide a short description explaining the what, why, and how of your project. Use the following questions as a guide:
+This application provides an online retail company the back-end technology to update their inventory using an Express.js API that uses Sequelize to interact with a MySQL database. By utilizing the CRUD methods, the user is able to easily update their products on their site. 
 
-Below is a full video walkthrough of the demo:
-![]()
+[Click Here to watch a full walkthrough video of the demo:](https://drive.google.com/file/d/155lq4QcmAfBkz4EnP4RyRFZ8Hx-mdCAe/view)
+
+![Ecommerce Back-End (ORM)](./Assets/Ecommerce%20Back-End%20(ORM).gif)
+
+
 
 ## Table of Contents
 
@@ -41,18 +44,25 @@ THEN I am able to successfully create, update, and delete data in my database
 
 ## Installation
 
-NPM is needed to run this application.
+NPM and MySQL is needed to run this application.
 
 ## Demo
 
 The following animation shows the application's GET routes to return all categories, all products, and all tags being tested in Insomnia:
 
-![]()
+![GET all items](./Assets/GET%20all%20items.gif)
+
+[Click to view](https://drive.google.com/file/d/1gACMl4TwqGA5yPKXZS5nwztfsgOJrr-1/view)
 
 The following animation shows the application's GET routes to return a single category, a single product, and a single tag being tested in Insomnia:
+![GET single item](./Assets/GET%20single%20item.gif)
+
+[Click to view](https://drive.google.com/file/d/1lElFL4YxJc5Z2Vt8JxhVMHTj4OTdrWS6/view)
 
 The following animation shows the application's POST, PUT, and DELETE routes for categories being tested in Insomnia:
+![POST-PUT-DELETE Items](./Assets/POST-PUT-DELETE%20items.gif)
 
+[Click to view](https://drive.google.com/file/d/1hjrqARKCHo-obrY1QXL3qc1Ru9ubh5G5/view)
 
 ## License
 
